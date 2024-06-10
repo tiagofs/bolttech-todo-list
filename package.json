@@ -1,0 +1,15 @@
+{
+  "name": "bolttech-todo-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm --filter=frontend --filter=backend dev",
+    "dev:fe": "pnpm --filter=frontend dev",
+    "dev:be": "pnpm --filter=backend dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
