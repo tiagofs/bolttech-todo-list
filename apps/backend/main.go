@@ -33,11 +33,20 @@ func main() {
 
 	// Mote this to config/env file.
 	host := "localhost"
-	port := "8080"
+	port := 8080
 
-	go func() {
-		if err := app.Run(fmt.Sprintf("%s:%d", host, port)); err != nil {
-			log.Panic(err)
-		}
-	}()
+	// go func() {
+	if err := app.Run(fmt.Sprintf("%s:%d", host, port)); err != nil {
+		fmt.Print("Error running the Gin app")
+		log.Panic(err)
+	}
+	// }()
+
+	// Handle termination signals (SIGINT, SIGTERM)
+	// signalCh := make(chan os.Signal, 1)
+	// signal.Notify(signalCh, os.Interrupt, syscall.SIGTERM)
+
+	// // Block until a signal is received
+	// sig := <-signalCh
+	// fmt.Printf("Received signal: %v\n", sig)
 }

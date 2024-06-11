@@ -42,8 +42,14 @@ services:
     ports:
       - "5432:5432"
       # - "8000:8000"
-    env_file:
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      PGUSER: postgres
+      POSTGRES_DB: bolttech
+      # POSTGRES_HOSTNAME=localhost
+    # env_file:
       # Ensure that the variables in .env match the same variables in devcontainer.json
-      - .env
+      # - .env
     # Add "forwardPorts": ["5432"] to **devcontainer.json** to forward PostgreSQL locally.
     # (Adding the "ports" property to this file will not forward from a Codespace.)
