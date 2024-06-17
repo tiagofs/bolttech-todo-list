@@ -10,3 +10,9 @@ CREATE TABLE IF NOT EXISTS users (
   updated_at TIMESTAMP(0) NULL DEFAULT CURRENT_TIMESTAMP,
   deleted_at TIMESTAMP(0) NULL
 );
+
+
+CREATE TABLE IF NOT EXISTS projects (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  project_name VARCHAR(255)
+);

@@ -33,12 +33,6 @@ type RegisterRequest struct {
 	LastName  string `json:"last_name" validate:"required"`
 }
 
-// type RegisterResponse struct {
-// 	AccessToken string `json:"access_token"`
-// 	TokenType   string `json:"token_type"`
-// 	ExpiresIn   int64  `json:"expires_in"`
-// }
-
 func NewAuthController(userService services.UserServiceInterface) *AuthController {
 	return &AuthController{
 		userService: userService,

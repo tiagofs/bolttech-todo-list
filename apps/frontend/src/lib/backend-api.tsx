@@ -92,3 +92,19 @@ export const login = async (
   }
   return null;
 };
+
+export const createProject = async (projectName: string) => {
+
+  console.log("projectName: ", projectName)
+
+  const response = await doRequest("/api/v1/projects/", {
+    method: "POST",
+    body: JSON.stringify({ project_name: projectName }),
+  });
+
+  if (!response) {
+    return false;
+  }
+
+  return true;
+}

@@ -100,7 +100,6 @@ func (s *UserService) FindByID(id string) (*models.User, error) {
 }
 
 func (s *UserService) AddUser(user *models.User) (*models.User, error) {
-	// TODO: validate data, check e-mail already register
 	createdUser, err := s.UserRepository.AddUser(user)
 	if err != nil {
 		return nil, err
